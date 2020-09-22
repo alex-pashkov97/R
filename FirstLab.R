@@ -4,6 +4,8 @@ library(matrixStats)
 
 # import of custom files
 source("meanAir.R")
+source("maxTemp.R")
+source("testSet.R")
 
 a <- airquality
 ozone <-a$Ozone
@@ -26,6 +28,18 @@ solar <-a$Solar.R
 #print(colMins(as.matrix(a[sapply(a, is.numeric)])))
 #print(colMeans(as.matrix(a[sapply(a, is.numeric)])))
 #print(mean(a$Solar.R[a$Month == 5], na.rm=T))
-#meanAir("Ozone")
-#meanAir("Ozone", 0, 60)
-#meanAir("Solar.R", 0, 100)
+
+#Task 3
+#print(meanAir("Ozone"))
+#print(meanAir("Ozone", 0, 60))
+#print(meanAir("Solar.R", 0, 100))
+
+##fix task 4
+#x <- split(a$Solar.R, a$Month)
+#print(lapply(x, na.rm=TRUE, mean))
+
+#Task5
+#print(maxTemp(5))
+
+#Task6
+#print(testSet(50))

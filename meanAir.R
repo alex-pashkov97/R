@@ -14,6 +14,6 @@ meanAir <- function(factor, tMin = 60, tMax = 80){
     }
 
     factorMean = lapply(filteredDataFrame[factor], na.rm=T, mean)
-    print(factorMean)
+    #print(factorMean)
     return(factorMean)
 }
